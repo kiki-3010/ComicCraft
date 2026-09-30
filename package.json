@@ -1,0 +1,25 @@
+{
+  "name": "comiccraft-root",
+  "version": "1.0.0",
+  "description": "ComicCraft - AI-Powered Comic Creation Platform",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "comic",
+    "ai",
+    "full-stack",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "ComicCraft Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
